@@ -1,0 +1,48 @@
+{% extends 'base/core.html' %}
+{% load static %}
+
+{% block title %} Sign In {% endblock title %}
+
+{% block content %}
+
+<section>
+    <div class="login-form">
+        <div class="social-login">
+            <div class="block-social-login">
+                <div class="block-social">
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <a href="">Login with facebook</a>
+                </div>
+            </div>
+            <div class="block-social-login">or</div>
+        </div>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-field">
+                <input type="text" placeholder="Email" required name="user_email">
+            </div>
+            <div class="form-field">
+                <input type="password" placeholder="Password" required name="password">
+            </div>
+            <div class="block-forgot-pass">
+                <a href="{% url 'changepassword' %}">Forgot Password?</a>
+            </div>
+            <div>
+                {% for message in messages %}
+                <p style="color: red;">{{message}}</p>
+                {% endfor %}
+                <p></p>
+            </div>
+            <div class="btn-submit form-field">
+                <input type="submit" value="Login">
+            </div>
+            <div class="block-signup">
+                <span>Don't have an account? <a href="{% url 'sign_up' %}">Sign up</a></span>
+            </div>
+
+        </form>
+    </div>
+</section>
+
+
+{% endblock content %}

@@ -1,0 +1,13 @@
+{% extends 'base/core.html' %}
+{% load static %}
+
+{% block title %} Home {% endblock title %}
+
+{% block content %}
+
+<h1>welcome, {{user}}</h1>
+<div>
+    <a href="{% url 'log_out' %}" class="mb-lg-btn">Logout</a>
+</div>
+
+{% endblock content %}

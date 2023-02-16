@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #7a7a7a;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+.login-form {
+    width: 389px;
+    height: auto;
+    background: #fff;
+    border-radius: 8px;
+    padding: 30px 20px;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 10%);
+}
+
+.form-field {
+    padding: 12px 0;
+}
+
+.form-field input, .mb-lg-btn {
+    line-height: 42px;
+    padding: 0 16px;
+    width: 100%;
+    border: 1px solid #dddfe2;
+    border-radius: 4px;
+    font-size: 15px;
+    outline: none;
+}
+
+.btn-submit input {
+    cursor: pointer;
+}
+
+.block-forgot-pass {
+    padding-bottom: 20px;
+    text-align: left;
+}
+
+.block-signup {
+    text-align: center;
+    color: #7a7a7a;
+    padding: 10px 0;
+    font-size: 15px;
+}
+
+.block-signup a {
+    color: #0ab1b1;
+}
+
+.block-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    background: #166fe5;
+    border-radius: 4px;
+}
+
+.block-social i {
+    font-size: 22px;
+    color: white;
+}
+
+.block-social a {
+    color: white !important;
+    margin-left: 10px;
+}
+
+.block-social-login:nth-child(2) {
+    padding: 10px 0;
+    color: #7a7a7a;
+    text-align: center;
+}
+
+.social-login {
+    padding-top: 25px;
+}
+
+.field-verify{
+    line-height: 42px;
+    padding: 12px 16px;
+    width: 100%;
+    background: #319231;
+    border-radius: 4px;
+    font-size: 15px;
+    outline: none;
+    color: #fff;
+}
+.iti {
+    width: 78%;
+}
+.mb-su-inp {
+    width: 78% !important;
+}
+.block-disclaimer p {
+    color: #7a7a7a;
+    font-size: 12px;
+    letter-spacing: .1px;
+    padding: 10px 0;
+}
+.block-terms-policy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #7a7a7a;
+    padding: 12px 0;
+}
+.block-terms-policy  a {
+    text-decoration: underline;
+}
+.mb-lg-btn {
+    background: purple;
+    padding: 6px 20px;
+    margin-left: 20px;
+    color: #fff;
+}

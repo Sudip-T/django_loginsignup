@@ -1,0 +1,55 @@
+{% extends 'base/core.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'js/main.js' %}">
+
+{% block title %} Sign Up {% endblock title %}
+
+{% block content %}
+
+<section>
+    <div class="login-form">
+        <div class="social-login">
+            <div class="block-social-login">
+                <div class="block-social">
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <a href="">Login with facebook</a>
+                </div>
+            </div>
+            <div class="block-social-login">or</div>
+        </div>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-field">
+                <input type="text" placeholder="Full Name" required name="username">
+            </div>
+            <div class="form-field">
+                <input type="email" placeholder="Email" required name="email">
+            </div>
+            <div class="form-field">
+                <input type="password" placeholder="Password" required name="password">
+            </div>
+            <div class="form-field">
+                <input class="mb-su-inp" id='phone' type="tel" placeholder="phone" name="phone">
+                <a href="" class="field-verify">Verify</a>
+            </div>
+            <div class="block-disclaimer">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, illum aut, exercitationem odit aliquid porro eius veritatis numquam, eum non explicabo? Eius quos quod maxime.</p>
+            </div>
+            <div class="btn-submit form-field">
+                <input type="submit" value="Sign Up">
+            </div>
+            <div class="block-signup">
+                <span>Have an account? <a href="{% url 'log_in' %}">Log In</a></span>
+            </div>
+            <div class="block-terms-policy">
+                <span>By signing up, you agree to</span>
+                <div class="links">
+                    <a href="{% url 'terms' %}">Terms and Service</a> &
+                    <a href="{% url 'privacy' %}">Privacy Policy</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+{% endblock content %}
